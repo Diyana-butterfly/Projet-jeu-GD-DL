@@ -1,9 +1,9 @@
-/*
-*Auteur : GANDA & DAKEY
-*
-*Parcours : EPL Génie Logiciel S3
-*Années : 2024-2025
-*/
+/**********************************************************************
+*Auteur         : GANDA & DAKEY
+*Parcours       : EPL Génie Logiciel S3
+*Date           : 08 février 2025
+*Description    : Programme de jeu de devinette
+***********************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,6 +20,7 @@ int main()
     setlocale(LC_CTYPE,"");
 
     char pseudo[100];
+    printf("\t\t\t\t\tBIENVENUE SUR NOTRE JEU DE DEVINETTE\n");
     printf("Entrez votre pseudo : ");
     scanf("%s", pseudo);
     enregistrerPseudo(pseudo);
@@ -63,7 +64,6 @@ int main()
 
         default:
             printf("Choix invalide.\n");
-            return 1;
         }
         jeuDeDevinette(max, tentativesMax);
 
