@@ -1,12 +1,13 @@
 /**********************************************************************
 *Auteur         : GANDA & DAKEY
 *Parcours       : EPL Génie Logiciel S3
-*Date           : 08 février 2025
+*Années         : 2024-2025
 *Description    : Programme de jeu de devinette
 ***********************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "random.h"
 #include "jeu.h"
 #include "difficulte.h"
@@ -19,19 +20,21 @@ int main()
 
     setlocale(LC_CTYPE,"");
 
-    char pseudo[100];
+
     printf("\t\t\t\t\tBIENVENUE SUR NOTRE JEU DE DEVINETTE\n");
+
+    char pseudo[100];
     printf("Entrez votre pseudo : ");
     scanf("%s", pseudo);
-    enregistrerPseudo(pseudo);
+    enregistrerPseudo(pseudo);//appel de la fonction enregistrerPseudo pour l'enregistrement des pseudos
 
 
-    int choix, max, tentativesMax;
+    int max = 0, tentativesMax = 0;
     char decision[4];
 
     do
     {
-        choisirNiveau(max, tentativesMax);
+        choisirNiveau(&max, &tentativesMax);
         jeuDeDevinette(max, tentativesMax);
 
         printf("Voulez vous rejouez (O / N) \n");

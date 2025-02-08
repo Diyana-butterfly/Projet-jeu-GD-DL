@@ -4,6 +4,7 @@
 #include "pseudo.h"
 
 void enregistrerPseudo(const char* pseudo) {
+
     FILE* fichier = fopen("pseudos.txt", "a+");
     if (fichier == NULL) {
         printf("Erreur d'ouverture du fichier.\n");

@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1739016435 source:c:\users\festado tv\documents\code block\jeu_de_devinette\difficulte.c
+1739051967 source:c:\users\festado tv\documents\code block\jeu_de_devinette\difficulte.c
 	<stdio.h>
 	"difficulte.h"
 
-1736330677 source:c:\users\festado tv\documents\code block\jeu_de_devinette\jeu.c
+1739050881 source:c:\users\festado tv\documents\code block\jeu_de_devinette\jeu.c
 	<stdio.h>
 	"random.h"
 	"jeu.h"
 
-1736334992 source:c:\users\festado tv\documents\code block\jeu_de_devinette\pseudo.c
+1739051331 source:c:\users\festado tv\documents\code block\jeu_de_devinette\pseudo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -19,9 +19,10 @@
 	<time.h>
 	"random.h"
 
-1739016663 source:c:\users\festado tv\documents\code block\jeu_de_devinette\main.c
+1739051423 source:c:\users\festado tv\documents\code block\jeu_de_devinette\main.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"random.h"
 	"jeu.h"
 	"difficulte.h"
