@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1736330735 source:c:\users\festado tv\documents\code block\jeu_de_devinette\difficulte.c
+	<stdio.h>
+	"difficulte.h"
+
+1736330677 source:c:\users\festado tv\documents\code block\jeu_de_devinette\jeu.c
+	<stdio.h>
+	"random.h"
+	"jeu.h"
+
+1736334992 source:c:\users\festado tv\documents\code block\jeu_de_devinette\pseudo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pseudo.h"
+
+1736330614 source:c:\users\festado tv\documents\code block\jeu_de_devinette\random.c
+	<stdlib.h>
+	<time.h>
+	"random.h"
+
+1736338756 source:c:\users\festado tv\documents\code block\jeu_de_devinette\main.c
+	<stdio.h>
+	<stdlib.h>
+	"random.h"
+	"jeu.h"
+	"difficulte.h"
+	"pseudo.h"
+	"stat.h"
+	<locale.h>
+
+1736330677 c:\users\festado tv\documents\code block\jeu_de_devinette\random.h
+
+1736330712 c:\users\festado tv\documents\code block\jeu_de_devinette\jeu.h
+
+1736330769 c:\users\festado tv\documents\code block\jeu_de_devinette\difficulte.h
+
+1736330830 c:\users\festado tv\documents\code block\jeu_de_devinette\pseudo.h
+
+1736338756 c:\users\festado tv\documents\code block\jeu_de_devinette\stat.h
+
+1736339483 source:c:\users\festado tv\documents\code block\jeu_de_devinette\stat.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"stat.h"
+
