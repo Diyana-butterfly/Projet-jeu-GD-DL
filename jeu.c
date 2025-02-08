@@ -6,7 +6,7 @@ void jeuDeDevinette(int max, int tentativesMax) {
     int nombreMystere = genererNombreAleatoire(max);
     int nombreEntre, coups = 0;
 
-    printf("Devinez le nombre mystère entre 1 et %d\n", max);
+    printf("Devinez le nombre mystère entre 1 et %d \n", max);
 
     do {
         printf("Entrez un nombre : ");
