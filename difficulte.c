@@ -1,18 +1,21 @@
 #include <stdio.h>
 #include "difficulte.h"
 
+// Choix du niveau de difficulté
 void choisirNiveau(int* max, int* tentativesMax) {
-    int choix;
-        printf("Choisissez un niveau de difficulté :\n");
-        printf("1. Débutant (1 à 100, tentatives max: 10)\n");
-        printf("2. Moyen (1 à 500, tentatives max: 20)\n");
-        printf("3. Légende (1 à 2000, tentatives max: 25)\n");
-        printf("4. Master (personnaliser la borne maximale et les tentatives)\n");
-        printf("5. Voir archive des pseudos \n");
-        scanf("%d", &choix);
+     int choix;
+    printf("\n---------------------------------------------------------------------------------------------------------\n");
+    printf("Choisissez un niveau de difficulté :\n");
+    printf("1. Débutant (1 à 100, tentatives max: 10)\n");
+    printf("2. Moyen (1 à 500, tentatives max: 20)\n");
+    printf("3. Légende (1 à 2000, tentatives max: 25)\n");
+    printf("4. Master (personnaliser la borne maximale et les tentatives)\n");
+    printf("5. Voir archive des pseudos\n");
+    printf("-----------------------------------------------------------------------------------------------------------\n");
+    scanf("%d", &choix);
 
-        switch (choix)
-        {
+
+    switch (choix) {
         case 1:
             *max = 100;
             *tentativesMax = 10;
@@ -27,16 +30,15 @@ void choisirNiveau(int* max, int* tentativesMax) {
             break;
         case 4:
             printf("Entrez la borne maximale : ");
-            scanf("%d", &max);
+            scanf("%d", max);
             printf("Entrez le nombre maximum de tentatives : ");
-            scanf("%d", &tentativesMax);
+            scanf("%d", tentativesMax);
             break;
         case 5:
-            consulterPseudos();
+            consulterPseudos();// Afficher les archives des pseudos
             break;
         default:
             printf("Choix invalide.\n");
-        return 1;
-        }
-    }
-
+        return;
+           }
+}

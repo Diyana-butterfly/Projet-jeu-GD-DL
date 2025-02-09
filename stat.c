@@ -1,12 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 #include "stat.h"
 
-void enregistrerTentative(int tentative) {
-    FILE* fichier = fopen("tentatives.dat", "ab");
+// Enregistrer une tentative pour un utilisateur spécifique
+void enregistrerTentative(int tentative, const char* pseudo) {
+    char fichierNom[100];
+    snprintf(fichierNom, sizeof(fichierNom), "%s_tentatives.dat", pseudo);
+    FILE* fichier = fopen(fichierNom, "ab");
     if (fichier == NULL) {
-        printf("Erreur d'ouverture du fichier.\n");
+        printf("Erreur d'ouverture du fichier de tentatives.\n");
         return;
     }
 
@@ -14,10 +18,13 @@ void enregistrerTentative(int tentative) {
     fclose(fichier);
 }
 
-void calculerEcartType() {
-    FILE* fichier = fopen("tentatives.dat", "rb");
+// Calculer l'écart-type pour un utilisateur spécifique
+void calculerEcartType(const char* pseudo) {
+    char fichierNom[100];
+    snprintf(fichierNom, sizeof(fichierNom), "%s_tentatives.dat", pseudo);
+    FILE* fichier = fopen(fichierNom, "rb");
     if (fichier == NULL) {
-        printf("Erreur d'ouverture du fichier.\n");
+        printf("Erreur d'ouverture du fichier de tentatives.\n");
         return;
     }
 
@@ -36,21 +43,24 @@ void calculerEcartType() {
         double mean = sum / count;
         double variance = (sumSquares / count) - (mean * mean);
         double ecartType = sqrt(variance);
-        printf("Ecart-type des tentatives : %.2f\n", ecartType);
+        printf("Ecart-type des tentatives pour %s : %.2f\n", pseudo, ecartType);
     } else {
-        printf("Pas assez de données pour calculer l'écart-type.\n");
+        printf("Pas assez de données pour calculer l'écart-type pour %s.\n", pseudo);
     }
 }
 
-void consulterTentatives() {
-    FILE* fichier = fopen("tentatives.dat", "rb");
+// Consulter les tentatives pour un utilisateur spécifique
+void consulterTentatives(const char* pseudo) {
+    char fichierNom[100];
+    snprintf(fichierNom, sizeof(fichierNom), "%s_tentatives.dat", pseudo);
+    FILE* fichier = fopen(fichierNom, "rb");
     if (fichier == NULL) {
-        printf("Erreur d'ouverture du fichier.\n");
+        printf("Erreur d'ouverture du fichier de tentatives.\n");
         return;
     }
 
     int tentative;
-    printf("Archives des tentatives :\n");
+    printf("Archives des tentatives pour %s :\n", pseudo);
     while (fread(&tentative, sizeof(int), 1, fichier)) {
         printf("%d\n", tentative);
     }

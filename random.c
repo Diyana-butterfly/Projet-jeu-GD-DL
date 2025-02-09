@@ -2,7 +2,8 @@
 #include <time.h>
 #include "random.h"
 
-int genererNombreAleatoire(int max) {
+// Génère un nombre aléatoire entre 1 et max
+int genererNombreAleatoire(int max){
     srand(time(NULL));
     return rand() % max + 1;
 }

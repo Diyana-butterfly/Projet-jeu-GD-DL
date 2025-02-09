@@ -46,3 +46,53 @@
 	<math.h>
 	"stat.h"
 
+1739078988 source:c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\difficulte.c
+	<stdio.h>
+	"difficulte.h"
+
+1739061698 c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\difficulte.h
+
+1739077299 source:c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu.c
+	<stdio.h>
+	"random.h"
+	"jeu.h"
+	"stat.h"
+
+1739061698 c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\random.h
+
+1739077550 c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu.h
+
+1739067987 source:c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\random.c
+	<stdlib.h>
+	<time.h>
+	"random.h"
+
+1739077299 source:c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\stat.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	"stat.h"
+
+1739077839 c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\stat.h
+
+1739074801 source:c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\pseudo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"pseudo.h"
+
+1739061698 c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\pseudo.h
+
+1739078988 source:c:\users\dell\desktop\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\jeu_de_devinette\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"random.h"
+	"jeu.h"
+	"difficulte.h"
+	"pseudo.h"
+	"stat.h"
+

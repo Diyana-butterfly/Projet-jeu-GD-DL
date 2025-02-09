@@ -1,17 +1,24 @@
 #include <stdio.h>
 #include "random.h"
 #include "jeu.h"
+#include "stat.h"
 
-void jeuDeDevinette(int max, int tentativesMax) {
+// Fonction principale du jeu de devinette
+void jeuDeDevinette(int max, int tentativesMax, const char* pseudo) {
     int nombreMystere = genererNombreAleatoire(max);
     int nombreEntre, coups = 0;
 
-    printf("Devinez le nombre mystère entre 1 et %d\n", max);
+    printf("\nDevinez le nombre mystère entre 1 et %d\n", max);
 
     do {
         printf("Entrez un nombre : ");
-        scanf("%d", &nombreEntre);
+        if (scanf("%d", &nombreEntre) != 1) {
+            printf("Entrée invalide. Veuillez entrer un nombre entier.\n");
+            while (getchar() != '\n'); // Vider le tampon d'entrée
+            continue;
+        }
         coups++;
+        enregistrerTentative(nombreEntre, pseudo); // Enregistrer chaque tentative avec le pseudo
 
         if (nombreEntre < nombreMystere) {
             printf("C'est plus !\n");
@@ -26,4 +33,6 @@ void jeuDeDevinette(int max, int tentativesMax) {
             break;
         }
     } while (nombreEntre != nombreMystere);
+
+    calculerEcartType(pseudo); // Calculer l'écart-type des tentatives à la fin du jeu
 }

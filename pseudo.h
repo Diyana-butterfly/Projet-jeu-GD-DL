@@ -1,7 +1,8 @@
 #ifndef PSEUDO_H_INCLUDED
 #define PSEUDO_H_INCLUDED
 
-void enregistrerPseudo(const char* pseudo);
+int enregistrerPseudo(const char* pseudo, const char* motDePasse);
+int verifierPseudoEtMotDePasse(const char* pseudo, const char* motDePasse);
 void consulterPseudos();
 
 #endif // PSEUDO_H_INCLUDED
